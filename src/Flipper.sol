@@ -2,7 +2,7 @@
 pragma solidity ^0.8.20;
 
 contract Flipper{
-    bool public value;
+    bool value;
 
     constructor() {
         value=true;
