@@ -24,7 +24,7 @@
 
             //chamar o contrato (getValue)
             console2.log(flipper.getValue());
---
+
             vm.stopBroadcast();
         }
     }
