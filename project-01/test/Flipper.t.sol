@@ -1,7 +1,7 @@
-// SPDX-License-Identifier: MIT 
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
-import {Test, console2} from "forge-std/Test.sol";
+import {Test} from "forge-std/Test.sol";
 import {Flipper} from "../src/Flipper.sol";
 
 contract FlipperTest is Test {
@@ -15,8 +15,12 @@ contract FlipperTest is Test {
         assertEq(flipper.getValue(), true);
     }
 
-    function test_flipValue() public{
+    function test_flipValue() public {
         flipper.flip();
         assertEq(flipper.getValue(), false);
+    }
+
+    function test_flipDataValue() public {
+        assertEq(flipper.getData(98), address(0x2));
     }
 }
